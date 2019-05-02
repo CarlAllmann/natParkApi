@@ -1,0 +1,1 @@
+This is my attempt at the National Parks API assignment via Thinkful. I utilized the standard HTML/CSS format and also included some javascript and Jquery. I attained a API key via the natinal parks website(https://www.nps.gov/subjects/developer/guides.htm) and I ask that it is not distributed or shared beyond the scope of this project. 
