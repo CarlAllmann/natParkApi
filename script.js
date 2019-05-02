@@ -10,14 +10,14 @@ function formatQueryParams(params) {
 }
 
 function displayResults(responseJson, maxResults) {
-    console.log("responseJson"); 
+    console.log(responseJson); 
     $('#results-list').empty(); 
     for (let i = 0; i < responseJson.data.length & i <maxResults; i++) {
         $('#results-list').append(
             `<li>
                 <h3>${responseJson.data[i].fullName}</h3>
                 <a href='${responseJson.data[i].url}'>${responseJson.data[i].url}</a>
-                <p>${responseJson.data[i].descriptionInfo}</p>
+                <p>${responseJson.data[i].description}</p>
                 <p>${responseJson.data[i].address}</p>
             </li>`)
         
@@ -46,7 +46,7 @@ function getParkInfo(query, maxResults=10) {
             }
             throw new Error(response.statusText); 
         })
-        .then(responsejson => displayResults(responseJson, maxResults))
+        .then(responseJson => displayResults(responseJson, maxResults))
         .catch(err => {
             $('#js-error-message').text(`Something went wrong: ${err.message}`);
             console.log("fetch complete");
