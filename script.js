@@ -2,13 +2,11 @@
 
 const endPointUrl = 'https://developer.nps.gov/api/v1/parks'; 
 const apiKey = 'ah5zlsPzgvk9dDQ8hRXmA9CNbGdbVSdmxQyHUfZz'; 
-const searchTerm = $('#js-search-term').val();
-const maxResults = $('#js-max-results').val();
+
 
 
 function formatQueryParams(params) {
-    const queryItems = Object.keys(params)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+    const queryItems = Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
   return queryItems.join('&');
 
 }
@@ -61,9 +59,10 @@ function getParkInfo(searchTerm, maxResults=10) {
 
 
 function watchForm() {
-$('form').submit(event => {
+$('#js-form').submit(event => {
     event.preventDefault(); 
-    
+    const searchTerm = $('#js-search-term').val();
+    const maxResults = $('#js-max-results').val();
     getParkInfo(searchTerm, maxResults); 
     console.log("Form Submitted");
 })
