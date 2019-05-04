@@ -20,7 +20,7 @@ function displayResults(responseJson, maxResults) {
                 <h3>${responseJson.data[i].fullName}</h3>
                 <a href='${responseJson.data[i].url}'>${responseJson.data[i].url}</a>
                 <p>${responseJson.data[i].description}</p>
-                <p>${responseJson.data[i].address}</p>
+                
             </li>`)
         
     }; 
