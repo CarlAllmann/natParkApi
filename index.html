@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Find a Park in your State</h1>
+    <h1>Find a National Park in your State</h1>
     <h2>Please select your states code from the drop down menu</h2>
     <form id="js-form">
         <label for="state"></label>
@@ -69,9 +69,12 @@
             <option value="WY">Wyoming</option>
         </select>
         <br>
-        <Label for="max-results">Enter the number of results you would like returned</Label>
+        <Label for="max-results">Enter the number of results you would like returned. 
+        </Label>
+        <br>
         <input type="number" name="max-results" id="js-max-results" value="10" alt="maximum results">
         <input type="submit" value="Go!" alt="submit">
+        <p>*Please note there may be less than the requested number of parks in your state*</p>
     </form>
 
     <p id="js-error-message" class="error-message"></p>
